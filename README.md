@@ -1,57 +1,46 @@
-# Cybersecurity Journey
+# Cybersecurity & Engineering Journey
 
 > Computer Engineering student transitioning into offensive and defensive security.
-> Documenting practical work — tools built, labs run, systems broken.
+> Documenting practical work — tools built, labs run, systems broken, and hardware hacked.
 
 ---
 
-## Roadmap
+## 🗺️ Master Roadmap
 
-| Phase | Focus | Target Cert | Status |
-|-------|-------|-------------|--------|
-| 1 | Networking + Linux fundamentals | — | In progress |
-| 2 | Web app security + scripting | eJPT | Upcoming |
-| 3 | Active Directory + exploitation | CompTIA Security+ | Upcoming |
-| 4 | Full offensive ops | OSCP | Upcoming |
-
----
-
-## Progress
-
-### Week 1 — Recon & Scanning Tools
-
-| What | Output |
-|------|--------|
-| TCP port scanner v1 | Raw socket connect scan, banner grabbing |
-| TCP port scanner v2 | Threaded version, cleaner output |
+| Timeline | Focus | Core Curriculum / Target | Status |
+|----------|-------|--------------------------|--------|
+| **Month 1** | Networking Basics & OS Internals | Cisco CCNA 1 | 🟡 In Progress |
+| **Month 2** | IoT Security & Applied Crypto | Custom Hardware Projects | 🟡 In Progress |
+| **Month 3** | Web App Sec & Active Directory | eJPT / CompTIA Security+ | ⏳ Upcoming |
+| **Month 4+** | Advanced Offensive Operations | OSCP Preparation | ⏳ Upcoming |
 
 ---
 
-### Week 2 — Networking Protocols + Linux Internals
+## 🛠️ Tools & Stack
 
-| What | Output |
-|------|--------|
-| /proc filesystem inspection | Live process map, fd table, UID/EUID from /proc/2526 |
-| strace on ls | Full 96-syscall trace captured and summarized |
-| strace annotated | Line-by-line syscall breakdown |
-| SUID enumeration | 32 root-owned SUID binaries, GTFOBins cross-check |
-| PAM stack analysis | Confirmed nullok bypass on Kali default config |
-
----
-
-## Tools & Stack
-
-| Tool | Used for |
-|------|----------|
-| Python (sockets) | Custom TCP port scanners |
-| Nmap | Port scanning, NSE scripts, vuln detection |
-| Wireshark | Packet capture and protocol analysis |
-| strace | Syscall tracing |
-| ltrace | Library call tracing |
-| /proc | Live process inspection |
-| GTFOBins | SUID binary exploitation reference |
-| Hashcat | Hash cracking — dictionary and brute-force |
+| Category | Technologies Used |
+|----------|-------------------|
+| **Languages** | Python, C++, Bash |
+| **Networking** | Wireshark, Nmap, Custom Sockets |
+| **Hardware / IoT** | ESP8266 (NodeMCU), Sonoff DUAL R3, Arduino IDE |
+| **Cryptography** | BearSSL, AES-128-CBC, MD5, Hashcat |
+| **OS Internals** | `/proc` filesystem, `strace`, `ltrace`, GTFOBins |
 
 ---
 
-*Last updated: 16.04.2026 — Week 2*
+## 🚀 Progress Log
+
+### Month 2 — IoT Security & Applied Cryptography
+**Highlight: Project Ruby (Secure IoT Switch)**
+* Built an ESP8266-based acoustic switch (double-clap detection) to control a Sonoff DUAL R3 relay over the local network, bypassing manufacturer cloud infrastructure.
+* **Cryptographic Implementation:** Crafted a custom C++ HTTP client implementing AES-128-CBC encryption, PKCS7 padding, dynamic IV generation, and Base64 encoding using `BearSSL` to securely communicate with the Sonoff LAN API. 
+* **Hardware:** Handled logic debouncing, hardware interrupts, and secure OTA (Over-The-Air) firmware updates.
+
+### Month 1 — Reconnaissance & Linux Internals
+**Highlight: Custom Tooling & OS Exploitation**
+* **TCP Port Scanners:** Wrote raw socket connect scanners in Python (v1 basic banner grabbing; v2 multi-threaded for speed and cleaner CLI output).
+* **/proc Filesystem & Tracing:** Mapped live processes, file descriptor tables, and UID/EUID transitions. Used `strace` to capture and annotate full userspace-to-kernel transitions.
+* **Privilege Escalation Foundations:** Mapped root-owned SUID binaries on a test machine, cross-referenced exploitation paths via GTFOBins, and verified a PAM (Pluggable Authentication Module) `nullok` configuration bypass on a default Kali installation.
+
+---
+*Last updated: May 2026*
