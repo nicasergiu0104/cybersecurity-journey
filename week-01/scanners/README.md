@@ -32,3 +32,20 @@ python3 port_scanner_v2.py
 ```
 
 ## Sample Output
+
+Scanning target: 10.10.10.2
+Started at: 2026-03-29 13:00:58
+[+] Port 135: OPEN
+[+] Port 139: OPEN
+[+] Port 445: OPEN
+Total open ports found: 3
+Open ports: [135, 139, 445]
+
+
+## Key Concepts
+
+- **TCP Connect scan**: completes full 3-way handshake (SYN → SYN-ACK → ACK)
+- **Threading**: `ThreadPoolExecutor` manages 100 concurrent connections
+- **Race condition prevention**: `threading.Lock()` protects shared `open_ports` list
+- **Validated against**: Nmap on Windows 7 target — confirmed MS17-010 
+  (EternalBlue) vulnerability on port 445
