@@ -30,7 +30,7 @@
 ## Related Projects
 
 - [**Port Scanner Web UI**](https://github.com/nicasergiu0104/port-scanner-web) — 
-  Full-stack React + Node.js + Python wrapper around the CLI port scanner above
+  Full-stack React + Node.js + Python wrapper around the CLI port scanner above `port_scanner_v2.py`
 
 ## 🚀 Progress Log
 
