@@ -27,6 +27,10 @@
 | **OS Internals** | `/proc` filesystem, `strace`, `ltrace`, GTFOBins |
 
 ---
+## Related Projects
+
+- [**Port Scanner Web UI**](https://github.com/nicasergiu0104/port-scanner-web) — 
+  Full-stack React + Node.js + Python wrapper around the CLI port scanner above
 
 ## 🚀 Progress Log
 
